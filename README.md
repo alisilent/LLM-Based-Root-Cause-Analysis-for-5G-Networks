@@ -66,6 +66,16 @@ On the unseen-class validation subset, **base Qwen achieved 19.79% accuracy befo
 
 ## Dataset
 
+### Origin: AI Telco Troubleshooting Challenge
+
+The data used in these notebooks are derived from the **[AI Telco Troubleshooting Challenge](https://zindi.africa/competitions/the-ai-telco-troubleshooting-challenge)**, organized by the **International Telecommunication Union (ITU)** and hosted on **Zindi**. The challenge explores how language models can assist with telecommunications troubleshooting, root-cause identification, and robustness to unfamiliar faults and network conditions. Its Qwen2.5-7B-Instruct track provides relevant context for the model selected in this repository.
+
+The challenge uses **TeleLogs** telecommunications troubleshooting data. Our repository uses a **processed, task-specific subset** with engineered numerical features and its own fixed training, validation, and test assignments; it is **not** a reproduction of the competition's original evaluation protocol. The results reported below come from our notebook experiments, **not from an official challenge submission or leaderboard**.
+
+**Original sources:** [Official Zindi competition page](https://zindi.africa/competitions/the-ai-telco-troubleshooting-challenge) · [ITU / AI for Good challenge overview](https://aiforgood.itu.int/ai-telco-troubleshooting-challenge/) · [Challenge launch webinar](https://www.youtube.com/watch?v=Gk3jbguRSQg)
+
+### Processed data used in this repository
+
 All experiments operate on **2,400 labeled 5G incidents** spanning eight root-cause categories. The feature table contains **69 engineered diagnostic features** per incident; the notebooks use the same **18 preselected features** covering signal quality, antenna configuration, mobility, neighboring-cell relationships, throughput changes, and resource scheduling. The feature-selection procedure itself is not reproduced in these notebooks.
 
 | File | Contents |
@@ -157,6 +167,8 @@ This repository represents a **basic research implementation**, not a finished o
 
 Results and implementations in this repository document the **current stage**; the items above are planned research directions, not completed claims.
 
-## Data and sharing note
+## Data attribution, licensing, and responsible sharing
 
-The supplied `train.csv` includes incident-level drive-test and engineering-parameter text, including location and cell identifiers. Before publishing these files in a public repository, verify that redistribution is permitted and that any sensitive network/location information has been appropriately handled. Dataset provenance and licensing are not established by the notebooks alone.
+The original competition data are attributed to the **AI Telco Troubleshooting Challenge by ITU, hosted on Zindi**. The [official competition rules](https://zindi.africa/competitions/the-ai-telco-troubleshooting-challenge) state that challenge data may be used and shared under the **[Creative Commons Attribution–ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)** license. Redistribution of the processed data should preserve attribution, indicate that transformations and feature engineering have been applied, and follow the license's share-alike terms. This data license does not automatically assign the same license to the notebook code.
+
+The supplied `train.csv` includes incident-level drive-test and engineering-parameter text, including location and cell identifiers. Before publishing the CSVs publicly, review the original dataset terms and check that the data do not expose sensitive network, location, or operational information. This repository is an independent research exploration using competition-derived data, **not an official competition submission**.
