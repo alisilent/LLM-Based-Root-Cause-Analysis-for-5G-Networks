@@ -138,7 +138,7 @@ MODEL_NAME = "/absolute/path/to/Qwen2.5-7B-Instruct"
 
 **Important:** The notebooks currently contain the original machine-specific model path (`/home/azaddel/models/Qwen2.5-7B-Instruct`) and call `from_pretrained(..., local_files_only=True)`. The model is **not included** in this repository. Leaving the original path unchanged will cause model loading to fail on other machines.
 
-### 3. Run the notebooks
+### 3. Run the notebook
 
 Start Jupyter from the repository's **root directory** so the current working directory contains all three CSVs. Open either notebook and run its cells in order:
 
